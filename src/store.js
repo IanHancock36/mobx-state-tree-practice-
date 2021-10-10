@@ -25,7 +25,7 @@ export const JokeStore = types.model("JOKEStore",{
 
 }))
 
-// instanciate the store.
+
 let jokeStore;
 export const useJokes = () => {
   if(!jokeStore){
