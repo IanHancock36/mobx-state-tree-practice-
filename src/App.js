@@ -4,6 +4,9 @@ import { useJokes } from './store';
 
 export default function App() {
   const jokesStore = useJokes()
+  useEffect(() =>{
+    jokesStore.getJokes()
+  },[jokesStore])
 
   return (
     <div>
