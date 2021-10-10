@@ -21,6 +21,10 @@ export const JokeStore = types.model("JOKEStore",{
   },
  async fetchJokes(){
     const data = await getJokes()
+    const newJokes = data.jokes.map(joke =>({
+      jokeName : joke.value
+    }))
+    self.setJokes(newJokes)
   }
 
 }))
